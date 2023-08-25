@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import { Authenticated, UserContext } from "./components/Authenticated";
 import { UserButton } from "@clerk/clerk-react";
+import { Badge } from "@/components/ui/badge";
 
 function App() {
   return (
@@ -38,7 +39,7 @@ const Clicker = () => {
       <button onClick={() => setCount((count) => count + 1)}>
         count is {count}
       </button>
-      Hi {user?.name}!
+      <Badge>Hi {user?.name}!</Badge>
       <p>
         Edit <code>src/App.tsx</code> and save to test HMR
       </p>
